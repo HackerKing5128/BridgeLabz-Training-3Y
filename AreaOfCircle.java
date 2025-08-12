@@ -1,7 +1,6 @@
 // Program to calculate area of Circle
 
 import java.util.Scanner;
-import java.lang.Math; // for PI
 
 class AreaOfCircle {
     public static float area(float radius) {
