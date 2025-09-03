@@ -1,27 +1,34 @@
-public class HandBook {
-    //Declaring the variables to get the details of hand book
-    String bookTitle;
-    String bookAuthor;
+// Book class
+class Book {
+    // Attributes
+    String title;
+    String author;
     double price;
 
-    //constructor
-    HandBook(String bookTitle, String bookAuthor, double price) {
-        this.bookTitle = bookTitle;
-        this.bookAuthor = bookAuthor;
+    // Constructor
+    Book(String title, String author, double price) {
+        this.title = title;
+        this.author = author;
         this.price = price;
     }
 
-    //creating the method to display the output
-    public void displayBookDetails() {
-        System.out.println("Title of the book: " + bookTitle);
-        System.out.println("Author of the book: " + bookAuthor);
-        System.out.println("Price of the book: " + price);
+    // Method to display book details
+    void displayDetails() {
+        System.out.println("Book Details:");
+        System.out.println("Title  : " + title);
+        System.out.println("Author : " + author);
+        System.out.println("Price  : " + price);
     }
+}
 
+// Main class
+public class HandBook {
     public static void main(String[] args) {
-        HandBook book1 = new HandBook("2States", "Chetan Bhagat", 500);
-        HandBook book2 = new HandBook("Wings Of Fire", "Abdul kalam.A.P.J", 500);
-        book1.displayBookDetails();
-        book2.displayBookDetails();
+        // Create Book object
+        Book book1 = new Book("The Alchemist", "Paulo Coelho", 399.50);
+        Book book2 = new Book("Wings Of Fire", "A.P.J. Abdul kalam", 500);
+        // Display details
+        book1.displayDetails();
+        book2.displayDetails();
     }
 }

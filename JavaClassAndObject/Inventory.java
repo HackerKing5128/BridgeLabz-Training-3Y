@@ -1,32 +1,43 @@
-class Items {
-    //declaring the variables for listing the items
-    String[] itemCode;
-    String[] itemName;
-    double[] price;
+// Item class
+class Item {
+    // Attributes
+    int itemCode;
+    String itemName;
+    double price;
 
-    //constructor
-    Items(String[] itemName, String[] itemCode, double[] price) {
+    // Constructor
+    Item(int itemCode, String itemName, double price) {
         this.itemCode = itemCode;
         this.itemName = itemName;
         this.price = price;
     }
 
-    public void displayItems(int i) {
-        System.out.println("itemCode : " + itemCode[i]);
-        System.out.println("itemPrice : " + price[i]);
-        System.out.println("itemName : " + itemName[i]);
-        System.out.println("----------------------------");
+    // Method to calculate total cost
+    double calculateTotalCost(int quantity) {
+        return price * quantity;
     }
 
+    // Method to display item details
+    void displayDetails(int quantity) {
+        System.out.println("Item Details:");
+        System.out.println("Code     : " + itemCode);
+        System.out.println("Name     : " + itemName);
+        System.out.println("Price    : " + price);
+        System.out.println("Quantity : " + quantity);
+        System.out.println("Total Cost: " + calculateTotalCost(quantity));
+        System.out.println("----------------------------");
+    }
+}
+
+// Main class
+public class Inventory {
     public static void main(String[] args) {
-        String[] itemName = {"Water bottle", "Rice", "blackboard"};
-        String[] itemCode = {"01AA", "01BB", "02AA"};
-        double[] price = {500, 700, 400};
-        Items item1 = new Items(itemName, itemCode, price);
+        // Create Item object
+        Item item1 = new Item(101, "Laptop", 55000.00);
+        Item item2 = new Item(141, "Mobile", 35000.00);
 
-        for (int i = 0; i < price.length; i++) {
-            item1.displayItems(i);
-        }
-
+        // Display details with quantity
+        item1.displayDetails(2);
+        item2.displayDetails(5);
     }
 }

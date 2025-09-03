@@ -1,28 +1,38 @@
+// Circle class
 class Circle {
-
-    //non-static variables
+    // Attribute
     double radius;
 
-    //constructors
+    // Constructor
     Circle(double radius) {
         this.radius = radius;
     }
 
-    //Creating method for calculating area of circle
-    public void areaCircle() {
-        System.out.printf("Area of circle: %.4f", (Math.PI * radius * radius));
+    // Method to calculate area
+    double calculateArea() {
+        return Math.PI * radius * radius;
     }
 
-    //Creating method for calculating circumference of circle
-    public void circumferenceCircle() {
-        System.out.printf("\nCircumference of circle: %.4f ", (2 * Math.PI * radius));
+    // Method to calculate circumference
+    double calculateCircumference() {
+        return 2 * Math.PI * radius;
     }
 
+    // Method to display details
+    void displayCircle() {
+        System.out.println("Radius        : " + radius);
+        System.out.printf("Area          : %.2f",calculateArea());
+        System.out.printf("\nCircumference : %.2f ", calculateCircumference());
+    }
+}
+
+// Main class
+public class CircleArea {
     public static void main(String[] args) {
-        Circle circle = new Circle(2.5);//constructor invoke
+        // Create Circle object
+        Circle c1 = new Circle(7.0);
 
-        circle.areaCircle();//area method calling
-
-        circle.circumferenceCircle();//circumference method calling
+        // Display details
+        c1.displayCircle();
     }
 }

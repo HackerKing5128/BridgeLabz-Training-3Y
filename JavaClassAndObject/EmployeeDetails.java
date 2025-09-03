@@ -1,26 +1,32 @@
+// Employee class
 class Employee {
-    //non-static variables
+    // Attributes
     String name;
     int id;
     double salary;
 
-    //Constructor
+    // Constructor
     Employee(String name, int id, double salary) {
         this.name = name;
         this.id = id;
         this.salary = salary;
     }
 
-    //creating method to display employee details
-    public void displayEmployee() {
-        System.out.println("Employee Name: " + name);
-        System.out.println("Employee id: " + id);
-        System.out.println("Employee Salary: " + salary);
+    // Method to display details
+    void displayDetails() {
+        System.out.println("Employee Details:");
+        System.out.println("Name   : " + name);
+        System.out.println("ID     : " + id);
+        System.out.println("Salary : " + salary);
     }
+}
 
+// Main class
+public class EmployeeDetails {
     public static void main(String[] args) {
-        Employee emp = new Employee("Rohan", 1, 500000);//calling constructor
-        emp.displayEmployee();//calling the display method
+        // Creating an employee object
+        Employee emp1 = new Employee("Raghav Gupta", 101, 50000);
+        // Displaying details
+        emp1.displayDetails();
     }
-
 }

@@ -34,7 +34,7 @@ class CartItem {
 
     // Method to display the item details
     public void displayItem() {
-        System.out.println("Item: " + this.itemName + ", Price: $" + this.price + ", Quantity: " + this.quantity);
+        System.out.println("Item: " + this.itemName + ", Price: Rs." + this.price + ", Quantity: " + this.quantity);
     }
 
     // Main method to test the CartItem class
@@ -45,6 +45,6 @@ class CartItem {
         item1.addItem(2);      // Adding 2 more laptops
         item1.removeItem(1);   // Removing 1 laptop
         // Display total cost
-        System.out.println("Total cost: $" + item1.totalCost());
+        System.out.println("Total cost: Rs." + item1.totalCost());
     }
 }
